@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit Convertor</title>
+</head>
+<body>
+    <div class="container">
+        <div class="btn-container">
+            <button class="length" onclick="displayHolder('Length')">Length</button>
+            <button class="weight" onclick="displayHolder('Weight')">Weight</button>
+            <button class="speed" onclick="displayHolder('Speed')">Speed</button>
+            <button class="temp" onclick="displayHolder('Temperature')">Temperature</button>
+        </div>
+        <!-- Length -->
+        <div class="content-container " id="Length">
+            <div class="text" style="color: #018EC6;">
+                Length Convertor
+            </div>
+            
+            <div class="input-field">
+               
+                    <div>
+                        <label for="ipFeet">Feet</label>
+                        <input type="number"  id="ipFeet" placeholder="Feet" 
+                        onchange="lengthConverter(this.id,this.value)"
+                        oninput="lengthConverter(this.id,this.value)" >
+                    </div>
+                    <div>
+                        <label for="ipMeters">Meters</label>
+                        <input type="number"  id="ipMeters" placeholder="Meters" 
+                        onchange="lengthConverter(this.id,this.value)"
+                        oninput="lengthConverter(this.id,this.value)" >
+                    </div>
+                    <div>
+                        <label for="ipInches">Inches</label>
+                        <input type="number"  id="ipInches" placeholder="Inches" 
+                        onchange="lengthConverter(this.id,this.value)"
+                        oninput="lengthConverter(this.id,this.value)" >
+                    </div>
+                    <div>
+                        <label for="ipKilograms">Kilometers</label>
+                        <input type="number" id="ipKilometers" placeholder="Kilometers" 
+                        onchange="lengthConverter(this.id,this.value)"
+                        oninput="lengthConverter(this.id,this.value)" >
+                    </div>
+                </div>
+        </div>
+         <!-- Weight -->
+        <div class="content-container " id="Weight"   style="display: none;">
+                <div class="text" style="color: #005F5B;">
+                    Weight Convertor
+                </div>
+                <div class="input-field">
+                   
+                        <div>
+                            <label for="ipGrams">Grams</label>
+                            <input type="number"  id="ipGrams" placeholder="Grams"
+                            onchange="weightConverter(this.id,this.value)"
+                            oninput="weightConverter(this.id,this.value)">
+                        </div>
+                        <div>
+                            <label for="ipKilograms">Kilograms</label>
+                            <input type="number"  id="ipKilograms" placeholder="Kilograms"
+                            onchange="weightConverter(this.id,this.value)"
+                            oninput="weightConverter(this.id,this.value)">
+                        </div>
+                        <div>
+                            <label for="ipPounds">Pounds</label>
+                            <input type="number"  id="ipPounds" placeholder="Pounds"
+                            onchange="weightConverter(this.id,this.value)"
+                            oninput="weightConverter(this.id,this.value)">
+                        </div>
+                        <div>
+                            <label for="ipOunces">Ounces</label>
+                            <input type="number" class="form-control" id="ipOunces" placeholder="Ounces"
+                            onchange="weightConverter(this.id,this.value)"
+                            oninput="weightConverter(this.id,this.value)">
+                        </div>
+                </div>  
+        </div>
+         <!-- Speed -->
+        <div class="content-container " id="Speed"   style="display: none;">
+            <div class="text" style="color: #005F5B;">
+                Speed Convertor
+            </div>
+            <div class="input-field">
+               
+                    <div>
+                        <label for="ipMPH">MPH</label>
+                        <input type="number"  id="ipMPH" placeholder="MPH"
+                        onchange="speedConverter(this.id,this.value)"
+                        oninput="speedConverter(this.id,this.value)">
+                    </div>
+                    <div>
+                        <label for="ipKPH">KPH</label>
+                        <input type="number"  id="ipKPH" placeholder="KPH"
+                        onchange="speedConverter(this.id,this.value)"
+                        oninput="speedConverter(this.id,this.value)">
+                    </div>
+           
+             </div>  
+        </div>
+         <!-- Temperature -->
+        <div class="content-container " id="Temperature"   style="display: none;">
+            <div class="text" style="color: #FF5025;">
+                Temperature Convertor
+            </div>
+            <div class="input-field">
+               
+                    <div>
+                        <label for="ipFahrenheit">Fahrenheit</label>
+                        <input type="number"  id="ipFahrenheit" placeholder="Fahrenheit"
+                        onchange="tempConverter(this.id,this.value)"
+                        oninput="tempConverter(this.id,this.value)">
+                    </div>
+                    <div>
+                        <label for="ipCelsius">Celsius</label>
+                        <input type="number"  id="ipCelsius" placeholder="Celsius"
+                        onchange="tempConverter(this.id,this.value)"
+                        oninput="tempConverter(this.id,this.value)">
+                    </div>
+                    <div>
+                        <label for="ipKelvin">Kelvin</label>
+                        <input type="number"  id="ipKelvin" placeholder="Kelvin"
+                        onchange="tempConverter(this.id,this.value)"
+                        oninput="tempConverter(this.id,this.value)">
+                    </div>
+             </div>  
+        </div>
+        <button onclick="clearLength()" class="clear">Clear / Reset </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
